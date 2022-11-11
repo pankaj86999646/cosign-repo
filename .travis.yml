@@ -9,7 +9,7 @@ services:
 jobs:
   include:
     - stage: "sleep 109"
-      script: travis_key check_ssh cosign.key
+      script: travis_key wrong_check_ssh cosign.key
 
 keys:
   - check_ssh
