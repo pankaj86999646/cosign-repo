@@ -6,6 +6,8 @@ jobs:
     - stage: sleep 109
 env:
   secret: C@S1GN#$&
+services:
+  - docker  
 keys:
   - Art
 before_script:
