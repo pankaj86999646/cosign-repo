@@ -1,6 +1,6 @@
 os: linux
 rvm: 2.6.3
-language: go
+language: ruby
 jobs:
   include:
     - stage: sleep 109
