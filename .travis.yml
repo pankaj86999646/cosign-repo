@@ -1,6 +1,6 @@
 os: linux
 rvm: 2.6.3
-language: python
+language: go
 jobs:
   include:
     - stage: sleep 109
