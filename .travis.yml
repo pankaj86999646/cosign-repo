@@ -11,4 +11,4 @@ before_script:
 keys:
   - Art
 script:
-  - cosign sign --key cosign.key 
+  - cosign sign --key cosign.key arthanaharidas/python-hello-world
