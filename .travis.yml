@@ -6,7 +6,7 @@ jobs:
     - stage: sleep 109
 env:
   secret: C@S1GN#$&
-  keys:
+keys:
   - Art
 before_script:
   - travis_key Art cosign.key
