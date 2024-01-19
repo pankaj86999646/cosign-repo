@@ -1,5 +1,6 @@
 os: linux
 rvm: 2.6.3
+language: python
 jobs:
   include:
     - stage: sleep 109
@@ -10,4 +11,4 @@ before_script:
 keys:
   - Art
 script:
-  - cosign sign Art cosign.key 
+  - cosign sign --key cosign.key 
