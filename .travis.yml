@@ -12,5 +12,4 @@ jobs:
       script: travis_key wrong_check_ssh cosign.key
 
 keys:
-  - check_ssh
   - Art
