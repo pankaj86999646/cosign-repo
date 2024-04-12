@@ -16,7 +16,7 @@ jobs:
         - docker tag hello-world-python arthanaharidas/python-hello-world
         - docker push arthanaharidas/python-hello-world
         - export COSIGN_PASSWORD="${COS_PASSWORD}"
-   #     - cosign sign --key cosign.key arthanaharidas/python-hello-world
+        - cosign sign --key cosign.key arthanaharidas/python-hello-world
         - yes | cosign sign --key cosign.key arthanaharidas/python-hello-world
         - cosign verify --key cosign.pub arthanaharidas/python-hello-world
         - docker logout
