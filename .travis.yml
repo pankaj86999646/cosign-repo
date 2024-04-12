@@ -13,15 +13,13 @@ jobs:
         - echo arthanaharidas
         - docker login -u "arthanaharidas" -p "${DOCKER_HUB_PASSWORD}"
         - docker build -t hello-world-python .
-   #     - docker tag hello-world-python arthanaharidas/python-hello-world
-        - docker digest sha256:376406a7134f77b8ba329fe3f1e23fc17200c01ed0e68253fc324b07e1248b02
-   #     - docker push arthanaharidas/python-hello-world
-        - docker push sha256:376406a7134f77b8ba329fe3f1e23fc17200c01ed0e68253fc324b07e1248b02
+        - docker tag hello-world-python arthanaharidas/python-hello-world
+        - docker push arthanaharidas/python-hello-world
         - export COSIGN_PASSWORD="${COS_PASSWORD}"
-   #     - cosign sign --key cosign.key arthanaharidas/python-hello-world
-        - cosign sign --key cosign.key sha256:376406a7134f77b8ba329fe3f1e23fc17200c01ed0e68253fc324b07e1248b02
-        - yes | cosign sign --key cosign.key sha256:376406a7134f77b8ba329fe3f1e23fc17200c01ed0e68253fc324b07e1248b02
-        - cosign verify --key cosign.pub sha256:376406a7134f77b8ba329fe3f1e23fc17200c01ed0e68253fc324b07e1248b02
+        - cosign sign --key cosign.key arthanaharidas/python-hello-world
+        - cosign sign --key cosign.key arthanaharidas/python-hello-world
+        - yes | cosign sign --key cosign.key arthanaharidas/python-hello-world
+        - cosign verify --key cosign.pub arthanaharidas/python-hello-world
         - docker logout
  
 keys:
